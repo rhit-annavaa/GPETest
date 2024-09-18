@@ -1,0 +1,135 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.4.0)"
+    },
+    "extensionsUsed": [
+        "KHR_materials_specular",
+        "KHR_materials_volume",
+        "FB_ngon_encoding"
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1600215,
+            "type": "VEC3",
+            "max": [
+                123.4986572265625,
+                62.43726348876953,
+                54.09067916870117
+            ],
+            "min": [
+                0.0,
+                0.0,
+                4.443929195404053
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1600215,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                0.9999997615814209
+            ],
+            "min": [
+                -1.0,
+                -0.9999999403953552,
+                -0.9999998211860657
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 1669344,
+            "type": "SCALAR",
+            "max": [
+                1600214
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 45082536,
+            "uri": "STL_flipped.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 19202580,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 19202580,
+            "byteLength": 19202580,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 38405160,
+            "byteLength": 6677376,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "DefaultMaterial",
+            "pbrMetallicRoughness": {
+                "metallicFactor": 0.0
+            },
+            "extensions": {
+                "KHR_materials_specular": {
+                    "specularFactor": 1.0
+                }
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": ".",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 2,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "<STL_BINARY>",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "node",
+            "mesh": 0
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}
