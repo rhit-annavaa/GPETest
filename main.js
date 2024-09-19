@@ -36,6 +36,7 @@ const groundMaterial = new THREE.MeshStandardMaterial({
   color: 0x555555,
   side: THREE.DoubleSide
 });
+
 const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
 groundMesh.castShadow = false;
 groundMesh.receiveShadow = true;
@@ -47,7 +48,11 @@ spotLight.castShadow = true;
 spotLight.shadow.bias = -0.0001;
 scene.add(spotLight);
 
-const loader = new GLTFLoader().setPath('public/millennium_falcon/');
+
+
+
+//ORIGINAL JS
+const loader = new GLTFLoader().setPath('public/aston_test/');
 loader.load('scene.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
@@ -61,6 +66,23 @@ loader.load('scene.gltf', (gltf) => {
 
   mesh.position.set(0, 1.05, -1);
   scene.add(mesh);
+
+  function createMesh(geometry, material, x, y, z, name){
+    const mesh = new THREE.Mesh(geometry, material.clone());
+    mesh.position.set(x,y,z);
+    mesh.name= name;
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    return mesh;
+  }
+
+  //adding more stuff for testing clicks
+
+  const cylinderGeometry = new THREE.CylinderGeometry(0.5, 0.5, 2);
+  const material = new THREE.MeshLambertMaterial();
+  const cylinders = new THREE.Group();
+  cylinders.add(createMesh(cylinderGeometry, material, 3, 1, 0, 'Cylinder'));
+  scene.add(cylinders);
 
   document.getElementById('progress-container').style.display = 'none';
 }, (xhr) => {
@@ -80,5 +102,30 @@ function animate() {
   controls.update();
   renderer.render(scene, camera);
 }
+
+//Raycasting setup attempt
+const raycaster = new THREE.Raycaster();
+
+document.addEventListener('mousedown', onMouseDown);
+
+function onMouseDown(event){
+  console.log("Click!");
+  const coords = new THREE.Vector2(
+    (event.clientX / renderer.domElement.clientWidth) * 2 -1,
+    -((event.clientY / renderer.domElement.clientHeight) * 2 - 1),
+  );
+  raycaster.setFromCamera(coords, camera);
+
+  const intersections = raycaster.intersectObjects(scene.children, true);
+  if (intersections.length > 0){
+    console.log(intersections);
+    const selectedObject = intersections[0].object;
+    const color = new THREE.Color(Math.random(), Math.random(), Math.random());
+    selectedObject.material.color = color;
+    console.log(`${selectedObject.name} was clicked!`);
+  }
+}
+
+//ENDOLDJS
 
 animate();
