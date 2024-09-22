@@ -1,6 +1,9 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -52,44 +55,64 @@ scene.add(spotLight);
 
 
 //ORIGINAL JS
-const loader = new GLTFLoader().setPath('public/aston_test/');
-loader.load('scene.gltf', (gltf) => {
-  console.log('loading model');
-  const mesh = gltf.scene;
+const loader = new GLTFLoader();
+// loader.setPath('public/gpe_testone/');
+const draco = new DRACOLoader();
+draco.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
+// draco.setDecoderPath("/draco");
+loader.setDRACOLoader(draco);
 
-  mesh.traverse((child) => {
-    if (child.isMesh) {
-      child.castShadow = true;
-      child.receiveShadow = true;
-    }
-  });
+loader.load( 'public/gpe_testone/scene.gltf', function ( gltf ) {
+  gltf.scene.rotation.x -= 1.5;
+  // gltf.scene.rotation.y += 0.1;
 
-  mesh.position.set(0, 1.05, -1);
-  scene.add(mesh);
+	scene.add( gltf.scene );
 
-  function createMesh(geometry, material, x, y, z, name){
-    const mesh = new THREE.Mesh(geometry, material.clone());
-    mesh.position.set(x,y,z);
-    mesh.name= name;
-    mesh.castShadow = true;
-    mesh.receiveShadow = true;
-    return mesh;
-  }
+}, undefined, function ( error ) {
 
-  //adding more stuff for testing clicks
+	console.error( error );
 
-  const cylinderGeometry = new THREE.CylinderGeometry(0.5, 0.5, 2);
-  const material = new THREE.MeshLambertMaterial();
-  const cylinders = new THREE.Group();
-  cylinders.add(createMesh(cylinderGeometry, material, 3, 1, 0, 'Cylinder'));
-  scene.add(cylinders);
+} );
 
-  document.getElementById('progress-container').style.display = 'none';
-}, (xhr) => {
-  console.log(`loading ${xhr.loaded / xhr.total * 100}%`);
-}, (error) => {
-  console.error(error);
-});
+// loader.load('aerodynamics_-_cfd_model_(2)_(1).gltf', (gltf) => {
+//   console.log('loading model');
+//   const mesh = gltf.scene;
+
+//   mesh.traverse((child) => {
+//     if (child.isMesh) {
+//       child.castShadow = true;
+//       child.receiveShadow = true;
+//     }
+//   scene.add( gltf.scene );
+
+//   });
+
+//   mesh.position.set(0, 1.05, -1);
+//   scene.add(mesh);
+
+//   function createMesh(geometry, material, x, y, z, name){
+//     const mesh = new THREE.Mesh(geometry, material.clone());
+//     mesh.position.set(x,y,z);
+//     mesh.name= name;
+//     mesh.castShadow = true;
+//     mesh.receiveShadow = true;
+//     return mesh;
+//   }
+
+//   //adding more stuff for testing clicks
+
+//   const cylinderGeometry = new THREE.CylinderGeometry(0.5, 0.5, 2);
+//   const material = new THREE.MeshLambertMaterial();
+//   const cylinders = new THREE.Group();
+//   cylinders.add(createMesh(cylinderGeometry, material, 3, 1, 0, 'Cylinder'));
+//   scene.add(cylinders);
+
+//   document.getElementById('progress-container').style.display = 'none';
+// }, (xhr) => {
+//   console.log(`loading ${xhr.loaded / xhr.total * 100}%`);
+// }, (error) => {
+//   console.error(error);
+// });
 
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
