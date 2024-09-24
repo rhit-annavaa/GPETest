@@ -106,7 +106,7 @@ function animate() {
 }
 
 //Raycasting setup attempt (detecting mouse clicks)
-const raycaster = new THREE.Raycaster();
+const raycaster = new THREE.Raycaster();  
 
 document.addEventListener('mousedown', onMouseDown);
 
