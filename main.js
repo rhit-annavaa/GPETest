@@ -64,10 +64,20 @@ draco.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
 // make the standar loader a draco loader
 loader.setDRACOLoader(draco);
 
-loader.load( 'public/gpe_testone/scene.gltf', function ( gltf ) {
-  gltf.scene.rotation.x -= 1.55;
-  // gltf.scene.rotation.y += 0.1;
+loader.load( 'public/gpe_testframe/scene.gltf', function ( gltf ) {
+  //for car model
+  // gltf.scene.rotation.x -= 1.55; //for car 
+  
+  //drivetrain
+  // gltf.scene.scale.multiplyScalar(5);
+  // gltf.scene.position.set(8, 1.2, 0); // Resetgin (or other coordinates)
 
+  //frame
+  gltf.scene.rotation.x -=1.55;
+  gltf.scene.scale.multiplyScalar(2);
+  //gltf.scene.position.set(8, 1.2, 0); // Resetgin (or other coordinates)
+
+  //default
 	scene.add( gltf.scene );
 
 }, undefined, function ( error ) {
@@ -79,6 +89,7 @@ loader.load( 'public/gpe_testone/scene.gltf', function ( gltf ) {
   function createMesh(geometry, material, x, y, z, name){
     const mesh = new THREE.Mesh(geometry, material.clone());
     mesh.position.set(x,y,z);
+    mesh.scale.set(2,2,2);
     mesh.name= name;
     mesh.castShadow = true;
     mesh.receiveShadow = true;
