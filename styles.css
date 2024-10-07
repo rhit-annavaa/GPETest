@@ -1,0 +1,15 @@
+#container1, #container2, #container3, #container4 {
+    width: 50%;
+    height: 400px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
+  #container-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+ 
+  
