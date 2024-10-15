@@ -40,10 +40,10 @@ renderer3.setClearColor(0x000000);
 // document.body.appendChild(renderer2.domElement);
 // document.body.appendChild(renderer3.domElement);
 
-document.getElementById('container1').appendChild(renderer1.domElement);
+document.getElementById('container1').appendChild(renderer.domElement);
 document.getElementById('container2').appendChild(renderer3.domElement);
 document.getElementById('container3').appendChild(renderer2.domElement);
-document.getElementById('container4').appendChild(renderer.domElement);
+document.getElementById('container4').appendChild(renderer1.domElement);
 
 
 //scene creation 
@@ -166,7 +166,7 @@ loader3.setDRACOLoader(draco3);
 
 
 
-loader1.load( 'public/gpe_testone/scene.gltf', function ( gltf ) {
+loader1.load( 'public/gpe_testdrivetrain/scene.gltf', function ( gltf ) {
   //for car model
   gltf.scene.rotation.x -= 1.55; //for car 
   gltf.scene.rotation.z -= 1.75;
@@ -500,3 +500,4 @@ animate();
 // }
 
 // animate();
+
