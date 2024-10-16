@@ -1,0 +1,435 @@
+{
+	"asset": {
+		"generator": "SOLIDWORKSGLTF",
+		"version" : "2.0"
+	},
+"extensionsUsed": [ "KHR_lights_punctual", "Solidworks_custom_properties", "KHR_draco_mesh_compression"],
+"extensionsRequired": [ "KHR_draco_mesh_compression" ],
+	"scene" : 0,
+	"scenes": [
+		{
+			"name": "Default - Display State-1",
+			"nodes": [
+				0, 1],
+			"extensions": {
+				"Solidworks_custom_properties": { 
+					"data": "LUhqcyAUTkAJKlJJHhMIRkZIRw43WFdjWVpyPCQ8c1c0LTpDWEdXQFBYZB0GABAJTFtPWQMQSEkjBggLGg0XDD9RUSRBQAkUbBhKbwQWeUFWCRRZTAo7Hx5hQS5MTlkXWiMRLkhqcyA/JE5afFNFLAZYExYPcRsqWAZtQ1hfV0FAH3wHBGNTTHYHHGpIbg8XY09aC0JURR98BwRjNx9RQg8VB3I3LUhqcyA/VhVYMFxJJEFACRRsQA42UlZjT1oLQExZDzsfHmFBEEZeQ0YVKQ8GbUNYXU9dUFhkHQYVBgJdFA1IcFc0LUhqAAA="				}
+			}
+
+		}
+	],
+	"nodes": [
+		{
+			"matrix": [
+				0.634071,					0.716549,					0.290709,					0,
+				-0.528038,					0.126572,					0.839735,					0,
+				0.564916,					-0.685957,					0.45862,					0,
+				7.03963,					-10.1954,					7.0182,					1
+			]
+			,"camera": 0
+			,"name": "current"		}
+,
+		{
+			"children": [
+				2, 3, 4
+			]
+			,"name": "Engine Assembly"		}
+,
+		{
+			"matrix": [
+				1.22465e-16,					1,					0,					0,
+				-1,					1.22465e-16,					0,					0,
+				0,					0,					1,					0,
+				-1.23457,					-0.04129,					0.185,					1
+			]
+			,"mesh": 0
+			,"name": "YAMAHA YFZ450R-1"		}
+,
+		{
+			"name": "1-04-100 EXHAUST ROUTING-1"		}
+,
+		{
+			"children": [
+				5, 6, 7, 8
+			]
+			,"matrix": [
+				0.992546,					2.74087e-16,					-0.121869,					0,
+				0.121869,					6.68345e-17,					0.992546,					0,
+				2.8019e-16,					-1,					3.29335e-17,					0,
+				-0.923236,					0.0497967,					0.0761368,					1
+			]
+			,"name": "1-02 FUEL TANK ASSYM-1"		}
+,
+		{
+			"matrix": [
+				0.992546,					0.121869,					-1.7087e-16,					0,
+				-0.121869,					0.992546,					3.29335e-17,					0,
+				1.7361e-16,					-1.18642e-17,					1,					0,
+				-0.119511,					0.110119,					0.149797,					1
+			]
+			,"mesh": 1
+			,"name": "1-02-101 6061 ALUMINUM, 0.25IN THICK BRACKET, FUELPUMP-1"		}
+,
+		{
+			"mesh": 2
+			,"name": "1-02-100 6061 ALUMINUM, SHEETMETAL, FUELTANK-1"		}
+,
+		{
+			"matrix": [
+				-0.90427,					-0.11103,					-0.412271,					0,
+				-0.121869,					0.992546,					3.34334e-16,					0,
+				0.409198,					0.0502432,					-0.911061,					0,
+				-0.071879,					0.122365,					-0.101347,					1
+			]
+			,"mesh": 3
+			,"name": "1-02-102 6061 ALUMINUM, 1.5IN OD 0.05IN THICK TUBE, FILLERNECK-1"		}
+,
+		{
+			"matrix": [
+				0.992546,					0.121869,					2.46519e-31,					0,
+				-0.121869,					0.992546,					-4.88398e-17,					0,
+				-5.95208e-18,					4.84758e-17,					1,					0,
+				-0.120285,					0.116422,					0.149809,					1
+			]
+			,"mesh": 4
+			,"name": "1-02-103 6061 ALUMINUM, 0.16IN THICK PLATE, FUELPUMP MOUNTING BRACKET-1"		}
+	],
+	"cameras": [
+		{
+			"type": "orthographic",
+			"orthographic" : {
+				"xmag": 1,
+				"ymag" : 1,
+				"zfar" : 100,
+				"znear" : 0.01
+			}
+		}
+	],
+	"meshes" : [
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 1,
+					"NORMAL" : 2,
+					"TEXCOORD_0" : 3
+					},
+					"indices" : 0,
+					"mode": 4,
+					"material" : 0
+					,"extensions": {
+					"KHR_draco_mesh_compression": {
+					"bufferView": 0,
+					"attributes" : {
+					"POSITION": 0,
+					"NORMAL" : 1,
+					"TEXCOORD_0" : 2
+					}
+					}
+					}
+				}
+			]
+		},
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 5,
+					"NORMAL" : 6,
+					"TEXCOORD_0" : 7
+					},
+					"indices" : 4,
+					"mode": 4,
+					"material" : 1
+					,"extensions": {
+					"KHR_draco_mesh_compression": {
+					"bufferView": 1,
+					"attributes" : {
+					"POSITION": 0,
+					"NORMAL" : 1,
+					"TEXCOORD_0" : 2
+					}
+					}
+					}
+				}
+			]
+		},
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 9,
+					"NORMAL" : 10,
+					"TEXCOORD_0" : 11
+					},
+					"indices" : 8,
+					"mode": 4,
+					"material" : 0
+					,"extensions": {
+					"KHR_draco_mesh_compression": {
+					"bufferView": 2,
+					"attributes" : {
+					"POSITION": 0,
+					"NORMAL" : 1,
+					"TEXCOORD_0" : 2
+					}
+					}
+					}
+				}
+			]
+		},
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 13,
+					"NORMAL" : 14,
+					"TEXCOORD_0" : 15
+					},
+					"indices" : 12,
+					"mode": 4,
+					"material" : 0
+					,"extensions": {
+					"KHR_draco_mesh_compression": {
+					"bufferView": 3,
+					"attributes" : {
+					"POSITION": 0,
+					"NORMAL" : 1,
+					"TEXCOORD_0" : 2
+					}
+					}
+					}
+				}
+			]
+		},
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 17,
+					"NORMAL" : 18,
+					"TEXCOORD_0" : 19
+					},
+					"indices" : 16,
+					"mode": 4,
+					"material" : 2
+					,"extensions": {
+					"KHR_draco_mesh_compression": {
+					"bufferView": 4,
+					"attributes" : {
+					"POSITION": 0,
+					"NORMAL" : 1,
+					"TEXCOORD_0" : 2
+					}
+					}
+					}
+				}
+			]
+		}
+	],
+	"accessors" : [
+			{
+				"componentType" : 5123
+				,"count" : 204
+				,"type" : "SCALAR"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 74
+				,"type" : "VEC3"
+				,"min" : [5.17052151e-02, -8.35696757e-02, 1.65871590e-01]
+				,"max" : [5.29775433e-02, 1.17549435e-38, 1.65989608e-01]
+			},
+			{
+				"componentType" : 5126
+				,"count" : 74
+				,"type" : "VEC3"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 74
+				,"type" : "VEC2"
+			},
+			{
+				"componentType" : 5123
+				,"count" : 6252
+				,"type" : "SCALAR"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 1976
+				,"type" : "VEC3"
+				,"min" : [-1.89746780e-19, 0.00000000e+00, -3.01726609e-01]
+				,"max" : [9.78154019e-02, 6.34999992e-03, 1.17549435e-38]
+			},
+			{
+				"componentType" : 5126
+				,"count" : 1976
+				,"type" : "VEC3"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 1976
+				,"type" : "VEC2"
+			},
+			{
+				"componentType" : 5123
+				,"count" : 7824
+				,"type" : "SCALAR"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 2604
+				,"type" : "VEC3"
+				,"min" : [-1.20861843e-01, -2.06217747e-02, -1.53627202e-01]
+				,"max" : [9.44837406e-02, 1.22131161e-01, 1.51396707e-01]
+			},
+			{
+				"componentType" : 5126
+				,"count" : 2604
+				,"type" : "VEC3"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 2604
+				,"type" : "VEC2"
+			},
+			{
+				"componentType" : 5123
+				,"count" : 3288
+				,"type" : "SCALAR"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 1096
+				,"type" : "VEC3"
+				,"min" : [-3.32126617e-02, -2.34187669e-17, -6.06361330e-02]
+				,"max" : [1.97466925e-01, 4.71556991e-01, 1.90500002e-02]
+			},
+			{
+				"componentType" : 5126
+				,"count" : 1096
+				,"type" : "VEC3"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 1096
+				,"type" : "VEC2"
+			},
+			{
+				"componentType" : 5123
+				,"count" : 7032
+				,"type" : "SCALAR"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 2220
+				,"type" : "VEC3"
+				,"min" : [-8.67361738e-19, 0.00000000e+00, -2.03199998e-01]
+				,"max" : [9.78154019e-02, 3.80999991e-03, 8.67361738e-19]
+			},
+			{
+				"componentType" : 5126
+				,"count" : 2220
+				,"type" : "VEC3"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 2220
+				,"type" : "VEC2"
+			}
+	],
+	"materials": [
+			{
+				"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.498039, 0.498039, 0.498039, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 1
+				}
+			},
+			{
+				"name": "satin finish aluminum"
+					,"normalTexture": {
+						"index": 0
+						,"scale": 0.3
+					}
+				,"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.866667, 0.909804, 1, 1
+					]
+					,"metallicFactor": 1
+					,"roughnessFactor": 0.1
+				}
+			},
+			{
+				"name": "satin finish aluminum-1"
+					,"normalTexture": {
+						"index": 0
+						,"scale": 0.3
+					}
+				,"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.866667, 0.909804, 1, 1
+					]
+					,"metallicFactor": 1
+					,"roughnessFactor": 0.1
+				}
+			}
+	],
+	"textures": [
+			{
+				"sampler": 0,
+				"source": 0,
+				"name": "n_satinwood_n.dds"
+			}
+	],
+	"images": [
+			{
+				"uri": "n_satinwood_n.dds"
+			}
+	],
+	"samplers": [
+			{
+				"magFilter": 9729,
+				"minFilter" : 9729,
+				"wrapS" : 10497,
+				"wrapT" : 10497,
+				"name": "DefaultSampler"
+			}
+	],
+	"bufferViews" : [
+			{
+				"buffer": 0
+				,"byteOffset" : 0
+				,"byteLength" : 620
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 620
+				,"byteLength" : 6872
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 7492
+				,"byteLength" : 12036
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 19528
+				,"byteLength" : 5296
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 24824
+				,"byteLength" : 8416
+			}
+	],
+	"buffers" : [
+			{
+				"byteLength": 33240
+				,"uri" : "data.bin"
+			}
+	]
+}
